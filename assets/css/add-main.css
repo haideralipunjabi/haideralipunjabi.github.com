@@ -11,3 +11,17 @@ a{
 .links a {
   margin-left: 3%;
 }
+
+.success {
+  border: 1px solid;
+  border-radius: 50px;
+  color: #11ff11;
+  background: #00000000;
+  padding: 0;
+  text-align: center;
+  margin-left: 1.5em;
+}
+.success:hover{
+  background: #00000000;
+
+}

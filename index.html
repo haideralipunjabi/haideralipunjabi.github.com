@@ -665,6 +665,7 @@
               <div class="col-12">
                 <textarea id="form_message" name="message" placeholder="Message" rows="6"></textarea>
               </div>
+              <span class="col-3 success" id="successMessage" onclick="javascript:$(this).hide();" style="display:none;">Message Sent</span>
               <div class="col-12">
                 <input id="submitButton" type="submit" value="Send Message" />
               </div>
@@ -739,7 +740,7 @@
           $.post("/form/", data).done(function(data){
             console.log(data);
             fields.val('');
-            $("#submitButton").before('<span class="success">Form Submitted</span>');
+            $("#successMessage").show();
           }).error(function(){
             console.log("done")
           });
