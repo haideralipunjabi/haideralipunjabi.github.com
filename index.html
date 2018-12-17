@@ -722,27 +722,9 @@
           data[$(field).attr('name')] = $(field).val();
         });
         if (validate) {
-          // $.ajax({
-          //   type: 'POST',
-          //   headers: {
-          //     "Access-Control-Allow-Origin":"*",
-          //     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-          //     'Access-Control-Max-Age': '604800',
-          //    'Access-Control-Allow-Headers': 'x-requested-with'
-          //   },
-          //   url: 'http://briskforms.com/go/1727c10a1beeb8fcdf04fa7a8d9154fb',
-          //   data: data,
-          //   success: function(data) {
-          //     fields.val('');
-          //     $("#submitButton").before('<span class="success">Form Submitted</span>');
-          //   }
-          // });
           $.post("/form/", data).done(function(data){
-            console.log(data);
             fields.val('');
             $("#successMessage").show();
-          }).error(function(){
-            console.log("done")
           });
         }
       });
