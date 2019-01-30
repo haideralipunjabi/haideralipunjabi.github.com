@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup as Soup
 def fpx_photographs():
     index = Soup(open("index.html",'r').read(),"html.parser")
     photography = index.select_one('#ph-photography')
-    url = "https://500px.com/search.rss?q=haideralipunjabi&page=%s"
+    url = "https://500px.com/search.rss?q=haideralipunjabi&type=photos&sort=newest&page=%s"
     page = 1
     photos = []
     more_photos = True
