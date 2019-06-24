@@ -8,7 +8,7 @@ a {
 
 }
 
-#resume a {
+.markdown a {
   color: -webkit-link;
   cursor: pointer;
   text-decoration: underline;
